@@ -36,13 +36,13 @@ The following information is to be delivered to the stakeholders:
 The following tasks have to be undertaking to fulfill the request:
 
 1. Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
-   - [ ] Engineer a query to resolve vital statistics to one record per person and only for a specified cohort.
+   - [ ] Engineer a query to resolve vital statistics to one record per person by picking the latest edit and only for a specified cohort.
    - [ ] Engineer a workflow of `upload->query->download`.
    - [ ] Unit test the workflow to ensure basic functionality.
    - [ ] Grant provisional access to the web based workflow to stakeholders.
    - [ ] Train stakeholders to use the workflow.
    - [ ] User acceptance testing of the workflow.
-   - [ ] Set to production.
+   - [ ] Publish to production.
 2. Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
     - [ ] Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort.
     - [ ] Engineer a workflow of `upload->query->download`.
@@ -50,4 +50,25 @@ The following tasks have to be undertaking to fulfill the request:
     - [ ] Grant provisional access to the web based workflow to stakeholders.
     - [ ] Train stakeholders to use the workflow.
     - [ ] User acceptance testing of the workflow.
-    - [ ] Set to production.
+    - [ ] Publish to production.
+
+## Estimates
+The following estimates are rough approximations that will be subject to change:
+
+|Task|Comments                                                    |Amount|Units|
+|----|------------------------------------------------------------|------|-----|
+|1.1 |Challenge to find latest edits, small data, fast test cycle.|    16|Hours|
+|1.2 |Challenge to authenticate user and access files.            |    16|Hours|
+|1.3 |Challenge to authenticate user and access files.            |     8|Hours|
+|1.4 |Straight forward.                                           |     1|Hours|
+|1.5 |Depends on user experience and connectivity.                |     2|Hours|
+|1.5 |Depends on user experience and connectivity.                |     8|Hours|
+|1.5 |Straight forward.                                           |     1|Hours|
+|1.1 |Challenge to query to large data, slow test cycle.          |    32|Hours|
+|1.2 |Challenge to authenticate user and access files.            |    32|Hours|
+|1.3 |Challenge to authenticate user and access files.            |    16|Hours|
+|1.4 |Straight forward.                                           |     1|Hours|
+|1.5 |Depends on user experience and connectivity.                |     2|Hours|
+|1.5 |Depends on user experience and connectivity.                |    16|Hours|
+|1.5 |Straight forward.                                           |     1|Hours|
+|    |Total                                                       |   152|Hours|
