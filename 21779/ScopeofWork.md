@@ -36,18 +36,18 @@ The following information is to be delivered to the stakeholders:
 The following tasks have to be undertaking to fulfill the request:
 
 1. Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
-   1. Engineer a query to resolve vital statistics to one record per person and only for a specified cohort.
-   2. Engineer a workflow of `upload->query->download`.
-   3. Unit test the workflow to ensure basic functionality.
-   4. Grant provisional access to the web based workflow to stakeholders.
-   5. Train stakeholders to use the workflow.
-   6. User acceptance testing of the workflow.
-   7. Set to production.
+   - [ ] Engineer a query to resolve vital statistics to one record per person and only for a specified cohort.
+   - [ ] Engineer a workflow of `upload->query->download`.
+   - [ ] Unit test the workflow to ensure basic functionality.
+   - [ ] Grant provisional access to the web based workflow to stakeholders.
+   - [ ] Train stakeholders to use the workflow.
+   - [ ] User acceptance testing of the workflow.
+   - [ ] Set to production.
 2. Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
-    1. Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort.
-    2. Engineer a workflow of `upload->query->download`.
-    3. Unit test the workflow to ensure basic functionality.
-    4. Grant provisional access to the web based workflow to stakeholders.
-    5. Train stakeholders to use the workflow.
-    6. User acceptance testing of the workflow.
-    7. Set to production.
+    - [ ] Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort.
+    - [ ] Engineer a workflow of `upload->query->download`.
+    - [ ] Unit test the workflow to ensure basic functionality.
+    - [ ] Grant provisional access to the web based workflow to stakeholders.
+    - [ ] Train stakeholders to use the workflow.
+    - [ ] User acceptance testing of the workflow.
+    - [ ] Set to production.
