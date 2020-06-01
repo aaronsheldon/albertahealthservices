@@ -35,19 +35,19 @@ The following information is to be delivered to the stakeholders:
 ## Tasks
 The following tasks have to be undertaking to fulfill the request:
 
-* Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
-   * Engineer a query to resolve vital statistics to one record per person and only for a specified cohort.
-   * Engineer a workflow of `upload->query->download`.
-   * Unit test the workflow to ensure basic functionality.
-   * Grant provisional access to the web based workflow to stakeholders.
-   * Train stakeholders to use the workflow.
-   * User acceptance testing of the workflow.
-   * Set to production.
-* Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
-    * Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort.
-    * Engineer a workflow of `upload->query->download`.
-    * Unit test the workflow to ensure basic functionality.
-    * Grant provisional access to the web based workflow to stakeholders.
-    * Train stakeholders to use the workflow.
-    * User acceptance testing of the workflow.
-    * Set to production.
+1. Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
+   1.1. Engineer a query to resolve vital statistics to one record per person and only for a specified cohort.
+   1.2. Engineer a workflow of `upload->query->download`.
+   1.3. Unit test the workflow to ensure basic functionality.
+   1.4. Grant provisional access to the web based workflow to stakeholders.
+   1.5. Train stakeholders to use the workflow.
+   1.6. User acceptance testing of the workflow.
+   1.7. Set to production.
+2. Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
+    2.1. Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort.
+    2.2. Engineer a workflow of `upload->query->download`.
+    2.3. Unit test the workflow to ensure basic functionality.
+    2.4. Grant provisional access to the web based workflow to stakeholders.
+    2.5. Train stakeholders to use the workflow.
+    2.6. User acceptance testing of the workflow.
+    2.7. Set to production.
