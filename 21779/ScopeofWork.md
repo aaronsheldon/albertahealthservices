@@ -35,4 +35,16 @@ The following information is to be delivered to the stakeholders:
 The following tasks have to be undertaking to fulfill the request:
 
 * Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
+ * Engineer query to resolve vital statistics to one record per person and select only a specified cohort.
+ * Engineer workflow of file upload->run query->file download.
+ * Unit test workflow to ensure basic functionality.
+ * Grant provisional access to web based workflow to stakeholders.
+ * User acceptance testing of workflow.
+ * Set to production.
 * Deliever a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
+ * Engineer query to resolve vital statistics to one record per person and select only a specified cohort.
+ * Engineer workflow of file upload->run query->file download.
+ * Unit test workflow to ensure basic functionality.
+ * Grant provisional access to web based workflow to stakeholders.
+ * User acceptance testing of workflow.
+ * Set to production.
