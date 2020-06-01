@@ -1,7 +1,7 @@
 # Alberta Health Services
 
 ## Description
-This repository records proof of work and fulfillment for assigned projects at Alberta Health Services project.
+This repository records proof of work and fulfillment of projects assigned at Alberta Health Services.
 
 ## Declaration and Land Acknowledgement
 These projects, their materials, resources, and manpower are wholly funded by Alberta Health Services for the purpose of informing health system performance improvement, and health care quality improvement. Alberta Health Services is the single public health authority of the province of Alberta, within the boundaries of the traditional lands of the nations of Treaties 6, 7, 8, and 10, and the peoples of Metis Regions 1, 2, 4, 5, and 6, including the Cree, Dene, Inuit, Kainai, Metis, Nakota Sioux, Piikani, Saulteaux, Siksika, Tsek’ehne, Tsuut’ina.
