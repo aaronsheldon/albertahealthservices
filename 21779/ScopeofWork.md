@@ -62,13 +62,13 @@ The following estimates are rough approximations that will be subject to change:
 |1.3 |Challenge to authenticate user and access files.            |     8|Hours|
 |1.4 |Straight forward.                                           |     1|Hours|
 |1.5 |Depends on user experience and connectivity.                |     2|Hours|
-|1.5 |Depends on user experience and connectivity.                |     8|Hours|
-|1.5 |Straight forward.                                           |     1|Hours|
-|1.1 |Challenge to query to large data, slow test cycle.          |    32|Hours|
-|1.2 |Challenge to authenticate user and access files.            |    32|Hours|
-|1.3 |Challenge to authenticate user and access files.            |    16|Hours|
-|1.4 |Straight forward.                                           |     1|Hours|
-|1.5 |Depends on user experience and connectivity.                |     2|Hours|
-|1.5 |Depends on user experience and connectivity.                |    16|Hours|
-|1.5 |Straight forward.                                           |     1|Hours|
+|1.6 |Depends on user experience and connectivity.                |     8|Hours|
+|1.7 |Straight forward.                                           |     1|Hours|
+|2.1 |Challenge to query to large data, slow test cycle.          |    32|Hours|
+|2.2 |Challenge to authenticate user and access files.            |    32|Hours|
+|2.3 |Challenge to authenticate user and access files.            |    16|Hours|
+|2.4 |Straight forward.                                           |     1|Hours|
+|2.5 |Depends on user experience and connectivity.                |     2|Hours|
+|2.6 |Depends on user experience and connectivity.                |    16|Hours|
+|2.7 |Straight forward.                                           |     1|Hours|
 |    |Total                                                       |   152|Hours|
