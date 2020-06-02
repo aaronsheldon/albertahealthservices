@@ -1,0 +1,1 @@
+/* Consolidated vital statistics to one record per person */
