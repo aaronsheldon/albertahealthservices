@@ -1,0 +1,1 @@
+/* Filter pharmacy down to just registered compounds */
