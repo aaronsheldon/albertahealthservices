@@ -23,6 +23,7 @@ The following information is to be delivered to the stakeholders:
 * One record per subject.
     * Pseudonymized identifier.
     * When known the date of death, null otherwise.
+    * Meta-data of the delivered vital statistics data.
 * One record per dispensing event.
     * Pseudonymized identifier.
     * Dispensing date
@@ -31,6 +32,7 @@ The following information is to be delivered to the stakeholders:
     * Dispensing units.
     * Dispensing quantity.
     * Days supply.
+    * Meta-data of the delivered pharmacy dispensing data.
 
 ## Tasks
 The following tasks have to be undertaking to fulfill the request:
