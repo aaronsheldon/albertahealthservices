@@ -9,10 +9,12 @@
   * `uliabphn`
   
 ## Pharmacy Dispensing
-* Source [`pharmacydispensing.sql`](pharmacydispensing.sql)
+* Source [`pharmacydispense.sql`](pharmacydispense.sql)
 * Fields
   * `uliabphn` - `integer` Alberta provincial healthcare number, a unique lifetime identifier of the person.
   * `dispensedate` - `date` Day the therapy was dispensed to the person.
+  * `siteidentifier` - `string` Pharmacy identifier.
 * Unique key - one record per person-day-pharamcy-therapy-units, to accomodate the possibility a therapy may be dispensed in different units due to limited avaialabilities.
   * `uliabphn`
   * `dispensedate`
+  * `siteidentifier`
