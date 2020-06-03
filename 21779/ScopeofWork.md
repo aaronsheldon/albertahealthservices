@@ -35,7 +35,7 @@ The following information is to be delivered to the stakeholders:
     * Meta-data of the delivered pharmacy dispensing data.
 
 ## Tasks
-The following tasks have to be undertaking to fulfill the request:
+The following tasks have to be undertaken to fulfill the request:
 
 1. Deliver a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
    - [ ] Engineer a query to resolve vital statistics to one record per person by picking the latest edit and only for a specified cohort.
