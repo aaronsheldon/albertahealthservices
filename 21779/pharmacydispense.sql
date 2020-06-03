@@ -1,8 +1,12 @@
 SELECT
   ab_hzrd_rts_anlys.hazardutilities.cleanphn(a0.rcpt_uli) uliabphn,
   a0.dspn_date dispensedate,
+  a0.drug_din registereddin,
+  a0.supp_drug_atc_code atcclassification,
+  a0.dspn_amt_qty suppliedquantity,
+  a0.dspn_amt_qty_units quantityunits,
   a0.fac_key_di360 siteidentifier,
-  a0.dspn_day_supply_qty dailydoses,
+  a0.dspn_day_supply_qty supplieddays,
   CASE a0.dspn_triplicate_boo WHEN 'T' THEN 0 ELSE 1 END standardtherapeutic,
   CASE a0.dspn_triplicate_boo WHEN 'T' THEN 1 ELSE 0 END controlledtherapeutic
 FROM
