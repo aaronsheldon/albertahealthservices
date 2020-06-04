@@ -4,8 +4,8 @@
 * Source [`vitalstatistics.sql`](vitalstatistics.sql)
 * Fields
   * `uliabphn` - `integer` Alberta provincial healthcare number, a unique lifetime identifier of the person.
-  * `deceaseddate` - `date` Latest record version of the date of death.
-  * `recordyear` - `integer` Year the record was last modified.
+  * `deceaseddate` - `date` Latest recorded version of the date of death.
+  * `recordyear` - `integer` Latest version year.
   * `sex` - `string` Binary biological sex as recorded in vital statistics.
   * `birthdate` - `date` Birthday as recorded in vital statistics.
 * Unique key - one record per person
