@@ -26,7 +26,7 @@
   * `recordcount` - `integer` Number of records covers by the unique key.
   * `standardtherapeutic` - `integer` Controlled substance schedule of the therapy: 0 triple pad; 1 otherwise.
   * `controlledtherapeutic` - `integer` Controlled substance schedule of the therapy: 1 triple pad; 0 otherwise.  
-* Unique key - one record per person-day-pharamcy-therapy-units, to accomodate the possibility a therapy may be dispensed in different units due to limited avaialabilities. Both `DIN` and `ATC` are included as `DIN` registers the product and `ATC` incorporates the therapuetic use of the product. The `UNITS` are included as the same therapy can be dispensed in different units.
+* Unique key - one record per person-day-pharamcy-therapy-units, to accomodate the possibility a therapy may be dispensed in different units due to limited avaialabilities. Both `DIN` and `ATC` are included as `DIN` registers the product and `ATC` incorporates the therapuetic use of the product.
   * `uliabphn`
   * `dispensedate`
   * `siteidentifier`
