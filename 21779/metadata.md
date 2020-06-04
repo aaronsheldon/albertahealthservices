@@ -22,8 +22,8 @@
   * `suppliedquantity` - `integer` Simple sum of the amount dispensed over records within the unique key.
   * `unitscode` - `string` Short code of the measurement units of the amount dispensed.
   * `unitsdescription` - `string` Long description of the measurement units of the amount dispensed.
-  * `supplieddays` - `integer` Simple sum of the days supply dispensed over the record within the unique key.
-  * `recordcount` - `integer` Number of records covers by the unique key.
+  * `supplieddays` - `integer` Simple sum of the days supply dispensed over the records within the unique key.
+  * `recordcount` - `integer` Number of records covered by the unique key.
   * `standardtherapeutic` - `integer` Controlled substance schedule of the therapy: 0 triple pad; 1 otherwise.
   * `controlledtherapeutic` - `integer` Controlled substance schedule of the therapy: 1 triple pad; 0 otherwise.  
 * Unique key - one record per person-day-pharamcy-therapy-units, to accomodate the possibility a therapy may be dispensed in different units due to limited avaialabilities. Both `DIN` and `ATC` are included as `DIN` registers the product and `ATC` incorporates the therapuetic use of the product.
