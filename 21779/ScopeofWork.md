@@ -34,22 +34,53 @@ The following information is to be delivered to the stakeholders:
     * Days supply.
     * Meta-data of the delivered pharmacy dispensing data.
 
+## Design
+The overall goal of the workflow designs are to balance security with utility. On the one hand we want users to to be able to seemless retrieve the data they need. One the other hand we need users to access file shares using integrated authentications and to access databases using manual authentication. For file share access the Alteryx server defers to integrated authentication by default. For database access the problem is complicated by the current configuration of the database which restricts the ability for native SQL cursors to cross schema boundaries. This means we will need to use `OPEN FOR` cursors calling dynamic SQL, and embed the cursor in a pipelined function running under `DEFINER`'s credentials. Access to both the Alteryx workflow and `GRANT`s to the pipelined function will be restricted to only the requesters. The solution will contain the following elements:
+
+* An empty table to store the PHNs and one time pads for each user and project, including a time of last upload.
+* A package for the project with `DEFINER` credentials containing two pipelined dynamic SQL functions.
+  * A function that takes the user identifier and returns the vital statistics for the subjects uploaded to the pad table by the user.
+  * A function that takes the user identifier and returns the pharmacy dispensing for the subjects uploaded to the pad table by the user.
+* An Alteryx collection for the project containing four workflows.
+  * A workflow for uploading the PHNs and one time pads, that first deletes all records for that user and project.
+  * A workflow that retrieves data from the vital statistics function into a CSV file.
+  * A workflow that retrieves data from the pharmacy dispensing function into a CSV file.
+  * A workflow that only resets the pad table for the user and the project, in case of problems.
+
 ## Tasks
 The following tasks have to be undertaken to fulfill the request:
 
-1. Deliver a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
-   - [ ] Engineer a query to resolve vital statistics to one record per person by picking the latest edit and only for a specified cohort.
-   - [ ] Engineer a workflow of `upload->query->download`.
-   - [ ] Unit test the workflow to ensure basic functionality.
-   - [ ] Grant provisional access to the web based workflow to stakeholders.
-   - [ ] Train stakeholders to use the workflow.
-   - [ ] User acceptance testing of the workflow.
-   - [ ] Publish to production.
-2. Deliver a workflow in Alteryx that takes a file containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
-    - [ ] Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort.
-    - [ ] Engineer a workflow of `upload->query->download`.
+1. Database engineering.
+    - [ ] Create target table for uploading one time pads.
+    - [ ] Engineer a query to resolve vital statistics to one record per person by picking the latest edit and only for a specified cohort and wrap in pipelined function.
+    - [ ] Unit test vital statistics.
+    - [ ] Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort and wrap.
+    - [ ] Unit test pharmacy dispensing.
+2. Deliver upload workflow
+    - [ ] Engineer upload workflow.
     - [ ] Unit test the workflow to ensure basic functionality.
-    - [ ] Grant provisional access to the web based workflow to stakeholders.
+    - [ ] Grant provisional access to the database table and web based workflow to stakeholders.
+    - [ ] Train stakeholders to use the workflow.
+    - [ ] User acceptance testing of the workflow.
+    - [ ] Publish to production.
+3. Deliver reset workflow
+    - [ ] Engineer reset workflow.
+    - [ ] Unit test the workflow to ensure basic functionality.
+    - [ ] Grant provisional access to the database table and web based workflow to stakeholders.
+    - [ ] Train stakeholders to use the workflow.
+    - [ ] User acceptance testing of the workflow.
+    - [ ] Publish to production.
+4. Deliver a workflow in Alteryx that reads the table containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
+    - [ ] Engineer a workflow of `query->download`.
+    - [ ] Unit test the workflow to ensure basic functionality.
+    - [ ] Grant provisional access to the database package and web based workflow to stakeholders.
+    - [ ] Train stakeholders to use the workflow.
+    - [ ] User acceptance testing of the workflow.
+    - [ ] Publish to production.
+5. Deliver a workflow in Alteryx that the table containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
+    - [ ] Engineer a workflow of `query->download`.
+    - [ ] Unit test the workflow to ensure basic functionality.
+    - [ ] Grant provisional access to the  database package and web based workflow to stakeholders.
     - [ ] Train stakeholders to use the workflow.
     - [ ] User acceptance testing of the workflow.
     - [ ] Publish to production.
