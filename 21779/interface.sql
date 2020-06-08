@@ -2,14 +2,14 @@ CREATE OR REPLACE PACKAGE 21779 AUTHID DEFINER AS
 
   TYPE vitalstatistic IS RECORD
   (
-		uliabphn INTEGER
+    uliabphn INTEGER
   );
   
   TYPE vitalstatistics IS TABLE OF vitalstatistic;
   
   TYPE pharmacydispense IS RECORD
   (
-		uliabphn INTEGER
+    uliabphn INTEGER
   );
   
   TYPE pharmacydispenses IS TABLE OF pharmacydispense;
