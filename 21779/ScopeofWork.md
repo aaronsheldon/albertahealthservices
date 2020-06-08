@@ -42,66 +42,67 @@ The overall goal of the workflow designs are to balance security with utility. O
   * A function that takes the user identifier and returns the vital statistics for the subjects uploaded to the pad table by the user.
   * A function that takes the user identifier and returns the pharmacy dispensing for the subjects uploaded to the pad table by the user.
 * An Alteryx collection for the project containing four workflows.
-  * A workflow for uploading the PHNs and one time pads, that first deletes all records for that user and project.
+  * A workflow for uploading the PHNs and one time pads that only inserts records, so that a full history of uploaded PHNs is recorded.
   * A workflow that retrieves data from the vital statistics function into a CSV file.
   * A workflow that retrieves data from the pharmacy dispensing function into a CSV file.
-  * A workflow that only resets the pad table for the user and the project, in case of problems.
 
 ## Tasks
 The following tasks have to be undertaken to fulfill the request:
 
 1. Database engineering.
-    - [ ] Create target table for uploading one time pads.
+    - [ ] Create target table for uploading one time pads that automatically timestamps and records user.
     - [ ] Engineer a query to resolve vital statistics to one record per person by picking the latest edit and only for a specified cohort and wrap in pipelined function.
     - [ ] Unit test vital statistics.
     - [ ] Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort and wrap.
     - [ ] Unit test pharmacy dispensing.
-2. Deliver upload workflow
+2. Deliver upload-insert workflow
     - [ ] Engineer upload workflow.
     - [ ] Unit test the workflow to ensure basic functionality.
     - [ ] Grant provisional access to the database table and web based workflow to stakeholders.
     - [ ] Train stakeholders to use the workflow.
     - [ ] User acceptance testing of the workflow.
-    - [ ] Publish to production.
-3. Deliver reset workflow
-    - [ ] Engineer reset workflow.
-    - [ ] Unit test the workflow to ensure basic functionality.
-    - [ ] Grant provisional access to the database table and web based workflow to stakeholders.
-    - [ ] Train stakeholders to use the workflow.
-    - [ ] User acceptance testing of the workflow.
-    - [ ] Publish to production.
-4. Deliver a workflow in Alteryx that reads the table containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
+    - [ ] Publish to production collection.
+3. Deliver a workflow in Alteryx that reads the table containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
     - [ ] Engineer a workflow of `query->download`.
     - [ ] Unit test the workflow to ensure basic functionality.
     - [ ] Grant provisional access to the database package and web based workflow to stakeholders.
     - [ ] Train stakeholders to use the workflow.
     - [ ] User acceptance testing of the workflow.
-    - [ ] Publish to production.
-5. Deliver a workflow in Alteryx that the table containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
+    - [ ] Publish to production collection.
+4. Deliver a workflow in Alteryx that the table containing the provincial health numbers of the selected cohort and returns the pharmacy dispensing information of the cohort in a separate file for download.
     - [ ] Engineer a workflow of `query->download`.
     - [ ] Unit test the workflow to ensure basic functionality.
     - [ ] Grant provisional access to the  database package and web based workflow to stakeholders.
     - [ ] Train stakeholders to use the workflow.
     - [ ] User acceptance testing of the workflow.
-    - [ ] Publish to production.
+    - [ ] Publish to production collection.
 
 ## Estimates
 The following estimates are rough approximations that will be subject to change:
 
 |Task|Comments                                                    |Amount|Units|
 |----|------------------------------------------------------------|------|-----|
-|1.1 |Challenge to find latest edits, small data, fast test cycle.|    16|Hours|
-|1.2 |Challenge to authenticate user and access files.            |    16|Hours|
-|1.3 |Challenge to authenticate user and access files.            |     8|Hours|
-|1.4 |Straight forward.                                           |     1|Hours|
-|1.5 |Depends on user experience and connectivity.                |     2|Hours|
-|1.6 |Depends on user experience and connectivity.                |     8|Hours|
-|1.7 |Straight forward.                                           |     1|Hours|
-|2.1 |Challenge to query to large data, slow test cycle.          |    32|Hours|
-|2.2 |Challenge to authenticate user and access files.            |    32|Hours|
-|2.3 |Challenge to authenticate user and access files.            |    16|Hours|
-|2.4 |Straight forward.                                           |     1|Hours|
-|2.5 |Depends on user experience and connectivity.                |     2|Hours|
-|2.6 |Depends on user experience and connectivity.                |    16|Hours|
-|2.7 |Straight forward.                                           |     1|Hours|
-|    |Total                                                       |   152|Hours|
+|1.1 |Challenge to auto-populate wit audit information            |     8|Hours|
+|1.2 |Draft is partially complete.                                |     4|Hours|
+|1.3 |Need to have a few test identifiers.                        |     4|Hours|
+|1.4 |Draft is partially complete.                                |     8|Hours|
+|1.5 |Challenge to query to large data, slow test cycle.          |     8|Hours|
+|2.1 |Copy over existing authentication workflow.                 |     4|Hours|
+|2.2 |Need to have a few test identifiers.                        |     4|Hours|
+|2.3 |Straight forward.                                           |     1|Hours|
+|2.4 |Largest part is preparing curriculum.                       |     8|Hours|
+|2.5 |Depends on user experience and connectivity.                |     8|Hours|
+|2.6 |Straight forward.                                           |     1|Hours|
+|3.1 |Copy over existing authentication workflow.                 |     4|Hours|
+|3.2 |Fast test cycle, small query target.                        |     8|Hours|
+|3.3 |Straight forward.                                           |     1|Hours|
+|3.4 |Largest part is preparing curriculum.                       |     8|Hours|
+|3.5 |Depends on user experience and connectivity.                |    16|Hours|
+|3.6 |Straight forward.                                           |     1|Hours|
+|4.1 |Copy over existing authentication workflow.                 |     4|Hours|
+|4.2 |Slow test cycle, large query target.                        |    16|Hours|
+|4.3 |Straight forward.                                           |     1|Hours|
+|4.4 |Largest part is preparing curriculum.                       |     8|Hours|
+|4.5 |Depends on user experience and connectivity.                |    32|Hours|
+|4.6 |Straight forward.                                           |     1|Hours|
+|    |Total                                                       |   158|Hours|
