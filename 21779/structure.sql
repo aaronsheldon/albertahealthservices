@@ -1,10 +1,10 @@
 CREATE TABLE randompseudonym
 (
-  uliabphn INTEGER,
-  ulipseudonym INTEGER,
-  uploadrequest INTEGER,
-  uploaddate DATE GENERATED (SYSDATE),
-  uploaduser VARCHAR2(4000) GENERATED (USER)
+  uliabphn INTEGER NOT NULL,
+  ulipseudonym INTEGER NOT NULL,
+  uploadrequest INTEGER NOT NULL,
+  uploaddate DATE DEFAULT SYSDATE NOT NULL,
+  uploaduser VARCHAR2(4000) DEFAULT USER NOT NULL
 );
 
 COMMENT ON TABLE randompseudonym IS 'Historical record of all uploaded psuedonyms of Alberta provincial healthcare numbers.';
