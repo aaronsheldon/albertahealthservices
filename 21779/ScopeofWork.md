@@ -82,27 +82,27 @@ The following estimates are rough approximations that will be subject to change:
 
 |Task|Comments                                                    |Amount|Units|
 |----|------------------------------------------------------------|------|-----|
-|1.1 |Challenge to auto-populate wit audit information            |     8|Hours|
+|1.1 |Challenge to auto-populate with audit information.          |     4|Hours|
 |1.2 |Draft is partially complete.                                |     4|Hours|
 |1.3 |Need to have a few test identifiers.                        |     4|Hours|
-|1.4 |Draft is partially complete.                                |     8|Hours|
+|1.4 |Draft is partially complete.                                |     4|Hours|
 |1.5 |Challenge to query to large data, slow test cycle.          |     8|Hours|
-|2.1 |Copy over existing authentication workflow.                 |     4|Hours|
-|2.2 |Need to have a few test identifiers.                        |     4|Hours|
-|2.3 |Straight forward.                                           |     1|Hours|
-|2.4 |Largest part is preparing curriculum.                       |     8|Hours|
-|2.5 |Depends on user experience and connectivity.                |     8|Hours|
-|2.6 |Straight forward.                                           |     1|Hours|
-|3.1 |Copy over existing authentication workflow.                 |     4|Hours|
-|3.2 |Fast test cycle, small query target.                        |     8|Hours|
-|3.3 |Straight forward.                                           |     1|Hours|
-|3.4 |Largest part is preparing curriculum.                       |     8|Hours|
-|3.5 |Depends on user experience and connectivity.                |    16|Hours|
-|3.6 |Straight forward.                                           |     1|Hours|
-|4.1 |Copy over existing authentication workflow.                 |     4|Hours|
-|4.2 |Slow test cycle, large query target.                        |    16|Hours|
-|4.3 |Straight forward.                                           |     1|Hours|
-|4.4 |Largest part is preparing curriculum.                       |     8|Hours|
-|4.5 |Depends on user experience and connectivity.                |    32|Hours|
-|4.6 |Straight forward.                                           |     1|Hours|
-|    |Total                                                       |   158|Hours|
+|2.1 |Copy over existing authentication workflow.                 |     1|Hours|
+|2.2 |Need to have a few test identifiers.                        |     2|Hours|
+|2.3 |Straight forward.                                           |     0|Hours|
+|2.4 |Largest part is preparing curriculum.                       |     0|Hours|
+|2.5 |Depends on user experience and connectivity.                |     0|Hours|
+|2.6 |Straight forward.                                           |     0|Hours|
+|3.1 |Copy over existing authentication workflow.                 |     1|Hours|
+|3.2 |Fast test cycle, small query target.                        |     4|Hours|
+|3.3 |Straight forward.                                           |     0|Hours|
+|3.4 |Largest part is preparing curriculum.                       |     0|Hours|
+|3.5 |Depends on user experience and connectivity.                |     0|Hours|
+|3.6 |Straight forward.                                           |     0|Hours|
+|4.1 |Copy over existing authentication workflow.                 |     1|Hours|
+|4.2 |Slow test cycle, large query target.                        |     8|Hours|
+|4.3 |Straight forward.                                           |     0|Hours|
+|4.4 |Largest part is preparing curriculum.                       |     0|Hours|
+|4.5 |Depends on user experience and connectivity.                |     0|Hours|
+|4.6 |Straight forward.                                           |     0|Hours|
+|    |Total                                                       |    37|Hours|
