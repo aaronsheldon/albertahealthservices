@@ -18,14 +18,14 @@ CREATE OR REPLACE PACKAGE 21779 AUTHID DEFINER AS
   
   CURSOR getpharmacydispense RETURN pharmacydispense;
   
-  CURSOR getlatestupload RETURN DATE;
-  
-  vitalstatisticsquery CONSTANT VARCHAR2(4000) := '';
-  
-  pharmacydispensesquery CONSTANT VARCHAR2(4000) := '';
+  CURSOR getlatestupload(queryuser IN VARCHAR2) RETURN DATE;
   
   FUNCTION getvitalstatistics RETURN vitalstatistics PIPELINED;
   
   FUNCTION getpharmacydispenses RETURN pharmacydispenses PIPELINED;
+  
+  vitalstatisticsquery CONSTANT VARCHAR2(4000) := '';
+  
+  pharmacydispensesquery CONSTANT VARCHAR2(4000) := '';
 
 END 21779
