@@ -78,7 +78,7 @@ The following tasks have to be undertaken to fulfill the request:
     - [ ] Publish to production collection.
 
 ## Estimates
-Approximately 1% of Albertans are enrolled in the Alberta's Tomorrow Project. The estimates are based on the assumption that queries will have to return approximately 1% of all stored records. The following estimates are rough approximations that will be subject to change:
+Approximately 1% of Albertans are enrolled in the Alberta's Tomorrow Project. The estimates are based on the assumption that queries will have to return approximately 1% of all stored records. Testing estimates assume triplicate runs of each unit of code to resolve errors and mistakes. The following estimates are rough approximations that will be subject to change:
 
 |Task|Comments                                          |Personal|Compute|External|Units|
 |----|--------------------------------------------------|--------|-------|--------|-----|
