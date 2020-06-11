@@ -33,7 +33,7 @@ WITH
     GROUP BY
       a0.uliabphn
   )
-SELECT
+SELECT /*+ NO_INDEX (a1) */
   a0.uliabphn,
   MAX(a0.ulipseudonym) ulipseudonym,
   a1.dspn_date dispensedate,
@@ -74,6 +74,8 @@ FROM
     a1.dspn_act_tp_code <> 'Z'
     AND
     a1.dspn_amt_qty > 0
+    AND
+    a1.dspn_day_supply_qty > 0
     AND
     a1.dspn_date BETWEEN greatest(TO_DATE('20080401', 'YYYYMMDD'), COALESCE(a1.rcpt_dob, a1.dspn_date)) AND least(TO_DATE('20180331', 'YYYYMMDD'), TRUNC(SYSDATE, 'MM'))
 GROUP BY
