@@ -50,18 +50,18 @@ The overall goal of the workflow designs are to balance security with utility. O
 The following tasks have to be undertaken to fulfill the request:
 
 1. Database engineering.
-    - [ ] Create target table for uploading one time pads that automatically timestamps and records user.
+    - [x] Create target table for uploading one time pads that automatically timestamps and records user.
     - [ ] Engineer a query to resolve vital statistics to one record per person by picking the latest edit and only for a specified cohort and wrap in pipelined function.
     - [ ] Unit test vital statistics.
-    - [ ] Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort and wrap.
+    - [x] Engineer a query to resolve pharmacy dispensing to one record per event and only for a specified cohort and wrap.
     - [ ] Unit test pharmacy dispensing.
 2. Deliver upload-insert workflow
-    - [ ] Engineer upload workflow.
-    - [ ] Unit test the workflow to ensure basic functionality.
+    - [x] Engineer upload workflow.
+    - [x] Unit test the workflow to ensure basic functionality.
     - [ ] Grant provisional access to the database table and web based workflow to stakeholders.
     - [ ] Train stakeholders to use the workflow.
     - [ ] User acceptance testing of the workflow.
-    - [ ] Publish to production collection.
+    - [x] Publish to production collection.
 3. Deliver a workflow in Alteryx that reads the table containing the provincial health numbers of the selected cohort and returns the vital statistics information of the cohort in a separate file for download.
     - [ ] Engineer a workflow of `query->download`.
     - [ ] Unit test the workflow to ensure basic functionality.
@@ -80,29 +80,29 @@ The following tasks have to be undertaken to fulfill the request:
 ## Estimates
 The following estimates are rough approximations that will be subject to change:
 
-|Task|Comments                                                    |Amount|Units|
-|----|------------------------------------------------------------|------|-----|
-|1.1 |Challenge to auto-populate with audit information.          |     4|Hours|
-|1.2 |Draft is partially complete.                                |     4|Hours|
-|1.3 |Need to have a few test identifiers.                        |     4|Hours|
-|1.4 |Draft is partially complete.                                |     4|Hours|
-|1.5 |Challenge to query to large data, slow test cycle.          |     8|Hours|
-|2.1 |Copy over existing authentication workflow.                 |     1|Hours|
-|2.2 |Need to have a few test identifiers.                        |     2|Hours|
-|2.3 |Straight forward.                                           |     0|Hours|
-|2.4 |Largest part is preparing curriculum.                       |     0|Hours|
-|2.5 |Depends on user experience and connectivity.                |     0|Hours|
-|2.6 |Straight forward.                                           |     0|Hours|
-|3.1 |Copy over existing authentication workflow.                 |     1|Hours|
-|3.2 |Fast test cycle, small query target.                        |     4|Hours|
-|3.3 |Straight forward.                                           |     0|Hours|
-|3.4 |Largest part is preparing curriculum.                       |     0|Hours|
-|3.5 |Depends on user experience and connectivity.                |     0|Hours|
-|3.6 |Straight forward.                                           |     0|Hours|
-|4.1 |Copy over existing authentication workflow.                 |     1|Hours|
-|4.2 |Slow test cycle, large query target.                        |     8|Hours|
-|4.3 |Straight forward.                                           |     0|Hours|
-|4.4 |Largest part is preparing curriculum.                       |     0|Hours|
-|4.5 |Depends on user experience and connectivity.                |     0|Hours|
-|4.6 |Straight forward.                                           |     0|Hours|
-|    |Total                                                       |    37|Hours|
+|Task|Comments                                          |Personal|Compute|External|Units|
+|----|--------------------------------------------------|--------|-------|--------|-----|
+|1.1 |Challenge to auto-populate with audit information.|       4|      0|       0|Hours|
+|1.2 |Draft is partially complete.                      |       4|      1|       0|Hours|
+|1.3 |Need to have a few test identifiers.              |       4|      1|       0|Hours|
+|1.4 |Draft is partially complete.                      |       4|      8|       0|Hours|
+|1.5 |Challenge to query to large data, slow test cycle.|       8|     24|       0|Hours|
+|2.1 |Copy over existing authentication workflow.       |       1|      0|       0|Hours|
+|2.2 |Need to have a few test identifiers.              |       2|      1|       0|Hours|
+|2.3 |Straight forward.                                 |       0|      0|       0|Hours|
+|2.4 |Largest part is preparing curriculum.             |       0|      0|       1|Hours|
+|2.5 |Depends on user experience and connectivity.      |       0|      1|       1|Hours|
+|2.6 |Straight forward.                                 |       0|      0|       0|Hours|
+|3.1 |Copy over existing authentication workflow.       |       1|      0|       0|Hours|
+|3.2 |Fast test cycle, small query target.              |       4|      1|       0|Hours|
+|3.3 |Straight forward.                                 |       0|      0|       0|Hours|
+|3.4 |Largest part is preparing curriculum.             |       0|      0|       1|Hours|
+|3.5 |Depends on user experience and connectivity.      |       0|      1|       1|Hours|
+|3.6 |Straight forward.                                 |       0|      0|       0|Hours|
+|4.1 |Copy over existing authentication workflow.       |       1|      0|       0|Hours|
+|4.2 |Slow test cycle, large query target.              |       8|     24|       0|Hours|
+|4.3 |Straight forward.                                 |       0|      0|       0|Hours|
+|4.4 |Largest part is preparing curriculum.             |       0|      0|       1|Hours|
+|4.5 |Depends on user experience and connectivity.      |       0|     24|       1|Hours|
+|4.6 |Straight forward.                                 |       0|      0|       0|Hours|
+|    |Total                                             |      37|     86|       6|Hours|
