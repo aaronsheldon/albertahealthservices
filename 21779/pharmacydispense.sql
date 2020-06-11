@@ -1,3 +1,4 @@
+CREATE TABLE testpin AS
 WITH
   latestupload AS
   (
@@ -18,26 +19,28 @@ WITH
   latestpseudonym AS
   (
     SELECT
-      a0.uliabphn,
+      ab_hzrd_rts_anlys.hazardutilities.cleanphn(a0.uliabphn) uliabphn,
       MAX(a0.ulipseudonym) ulipseudonym
     FROM
       randompseudonym a0
       INNER JOIN
       latestupload a1
       ON
+        ab_hzrd_rts_anlys.hazardutilities.cleanphn(a0.uliabphn) IS NOT NULL
+        AND
         a0.uploaduser = a1.uploaduser
         AND
         a0.uploadrequest = a1.uploadrequest
         AND
         a0.uploaddate = a1.uploaddate
     GROUP BY
-      a0.uliabphn
+      ab_hzrd_rts_anlys.hazardutilities.cleanphn(a0.uliabphn)
   )
-SELECT /*+ NO_INDEX (a1) */
+SELECT
   a0.uliabphn,
   MAX(a0.ulipseudonym) ulipseudonym,
   a1.dspn_date dispensedate,
-  a1.drug_din registereddin,
+  ab_hzrd_rts_anlys.hazardutilities.cleaninteger(a1.drug_din) registereddin,
   a1.supp_drug_atc_code atcclassification,
   SUM(a1.dspn_amt_qty) suppliedquantity,
   a1.dspn_amt_unt_msr_cd unitscode,
@@ -51,7 +54,7 @@ FROM
   INNER JOIN
   ahsdrrconform.cf_pin_dspn a1
   ON
-    a0.uliabphn = ab_hzrd_rts_anlys.hazardutilities.cleanphn(a1.rcpt_uli)
+    a0.uliabphn = a1.rcpt_uli
   INNER JOIN
   ahsdrrconform.cf_pin_dspn_ref_unt_msr_cd a2
   ON
@@ -61,7 +64,7 @@ FROM
     AND
     ab_hzrd_rts_anlys.hazardutilities.cleanprid(a1.prscb_prid) IS NOT NULL
     AND
-    a1.dspn_prod_id = a1.drug_din
+    ab_hzrd_rts_anlys.hazardutilities.cleaninteger(a1.dspn_prod_id) = ab_hzrd_rts_anlys.hazardutilities.cleaninteger(a1.drug_din)
     AND
     a1.drug_triplicate_boo = a1.dspn_triplicate_boo
     AND
@@ -76,6 +79,8 @@ FROM
     a1.dspn_amt_qty > 0
     AND
     a1.dspn_day_supply_qty > 0
+    AND
+    a1.dspn_cancel_date IS NULL
     AND
     a1.dspn_date BETWEEN greatest(TO_DATE('20080401', 'YYYYMMDD'), COALESCE(a1.rcpt_dob, a1.dspn_date)) AND least(TO_DATE('20180331', 'YYYYMMDD'), TRUNC(SYSDATE, 'MM'))
 GROUP BY
