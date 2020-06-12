@@ -23,9 +23,9 @@ The overall objective of the design of this project is to engineer a transparent
       * The intended use of the product, as indicated by the [Anatomical Therapeutic Chemical classification code](https://www.whocc.no/atc_ddd_index/).
       * The form of the product, as indicated by the units of measurement of the dispensed product.
  * The solution is hosted in an enterprise production environment that facilitates collaboration, succession management, transparency, security, accountability, reliability, and reproducibility:
-   * The solution must provide supervised and strictly specified authentication against enterprise identity managment.
+   * The solution must provide supervised and strictly specified authentication against enterprise identity management.
    * The solution must provide providence, chain of custody, and certification of authenticity of the supplied data.
-   * The solution must provide a logical connection and reference between the deliver and implementation and the design and specification.
+   * The solution must provide a logical connection and reference between the delivery and implementation and the design and specification.
 
 ## Inclusion/Exclusion Criteria
 The request will be restricted to the following information:
