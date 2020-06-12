@@ -110,8 +110,8 @@ Approximately 1% of Albertans are enrolled in the Alberta's Tomorrow Project. Th
 |1.1 |Challenge to auto-populate with audit information.|       4|      0|       0|Hours|
 |1.2 |Draft is partially complete.                      |       4|      1|       0|Hours|
 |1.3 |Need to have a few test identifiers.              |       4|      1|       0|Hours|
-|1.4 |Draft is partially complete.                      |       4|      8|       0|Hours|
-|1.5 |Challenge to query to large data, slow test cycle.|       8|     24|       0|Hours|
+|1.4 |Draft is partially complete.                      |       4|      6|       0|Hours|
+|1.5 |Challenge to query to large data, slow test cycle.|       8|      6|       0|Hours|
 |2.1 |Copy over existing authentication workflow.       |       1|      0|       0|Hours|
 |2.2 |Need to have a few test identifiers.              |       2|      1|       0|Hours|
 |2.3 |Straight forward.                                 |       0|      0|       0|Hours|
@@ -125,9 +125,9 @@ Approximately 1% of Albertans are enrolled in the Alberta's Tomorrow Project. Th
 |3.5 |Depends on user experience and connectivity.      |       0|      1|       1|Hours|
 |3.6 |Straight forward.                                 |       0|      0|       0|Hours|
 |4.1 |Copy over existing authentication workflow.       |       1|      0|       0|Hours|
-|4.2 |Slow test cycle, large query target.              |       8|     24|       0|Hours|
+|4.2 |Slow test cycle, large query target.              |       8|      6|       0|Hours|
 |4.3 |Straight forward.                                 |       0|      0|       0|Hours|
 |4.4 |Largest part is preparing curriculum.             |       0|      0|       1|Hours|
-|4.5 |Depends on user experience and connectivity.      |       0|     24|       1|Hours|
+|4.5 |Depends on user experience and connectivity.      |       0|      6|       1|Hours|
 |4.6 |Straight forward.                                 |       0|      0|       0|Hours|
-|    |Total                                             |      37|     86|       6|Hours|
+|    |Total                                             |      37|     30|       6|Hours|
