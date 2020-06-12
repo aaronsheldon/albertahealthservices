@@ -1,15 +1,39 @@
 # Request 21779
 
 ## Overview
-The Alberta's Tomorrow Project is requesting vital statistics and pharmacy dispensing information be retrieved for a selected cohort of subjects enrolled in the project.
+The [Alberta's Tomorrow Project](https://myatp.ca/) is requesting vital statistics and community pharmacy dispensing information be retrieved for a selected cohort of subjects enrolled in the project.
+
+## Objectives
+The overall objective of the design of this project is to engineer a transparent, reliable, and reproducible solution that is supported in an enterprise production environment and accounts for the most reasonable dominant factors beyond the scope of the project. The project will seek to fulfill the following design principles:
+
+* There is an *intent to use* log of submitted data for each user and project; specifically provincial healthcare numbers.
+* The submitted data is out of range; specifically provincial healthcare numbers.
+* The submitted data contains duplicates; specifically provincial healthcare numbers.
+* The source data has records with fields that are inconsistent with respect to internal comparison within the record.
+* The source data has been filtered appropriately with respect to the request; specifically returning only prescription products registered with [Health Canada](https://health-products.canada.ca/dpd-bdpp/index-eng.jsp).
+* Each record in the supplied data has a physical interpretation that is not confounded by the adminstrative transactions of data capture; specifically:
+  * Vital statistics is not confounded by multiple revisions and recordings of the vital statistics data set, and is supplied as one record per deceased person as identified by:
+    * The provincial healthcare number of the deceased person.
+  * Community pharamacy dispensing is not confounded by the pharmacy submitting the data of a single dispensed product over multiple transactions, and is supplied as one record per dispensed product as identified by:
+    * The provincial healthcare number of the recipient.
+    * The date of dispensing.
+    * The location of dispensing.
+    * The product dispensed as identifierd by the triple of:
+      * The Health Canada registration of the product, as indicated by the Drug Identification Number.
+      * The intended use of the product, as indicated by the [Anatomical Therapeutic Chemical classification code](https://www.whocc.no/atc_ddd_index/).
+      * The form of the product, as indicated by the units of measurement of the dispensed product.
+ * The solution is hosted in an enterprise production environment that facilitates collaboration, succession management, transparency, security, accountability, reliability, and reproducibility:
+   * The solution must provide supervised and strictly specified authentication against enterprise identity managment.
+   * The solution must provide providence, chain of custody, and certification of authenticity of the supplied data.
+   * The solution must provide a logical connection and reference between the deliver and implementation and the design and specification.
 
 ## Inclusion/Exclusion Criteria
 The request will be restricted to the following information:
 
 * Include only information about subjects in the submitted cohort.
 * Include only vital statistics up to March 31, 2018.
-* Include only pharmacy dispensing events occuring between April 1, 2008 and March 31, 2018.
-* Include only pharmacy dispensing events with both a valid DIN registration and ATC code.
+* Include only community pharmacy dispensing events occuring between April 1, 2008 and March 31, 2018.
+* Include only community pharmacy dispensing events with both a valid DIN registration and ATC code.
 
 ## Requirments
 The following information is required from the stakeholders:
@@ -22,16 +46,17 @@ The following information is to be delivered to the stakeholders:
 
 * One record per subject.
     * Pseudonymized identifier.
-    * When known the date of death, null otherwise.
+    * When known the date of death, no record otherwise.
     * Meta-data of the delivered vital statistics data.
-* One record per dispensing event.
+* One record per community pharamcy dispensing event.
     * Pseudonymized identifier.
-    * Dispensing date
+    * Dispensing date.
     * ATC code.
     * DIN registration.
     * Dispensing units.
     * Dispensing quantity.
     * Days supply.
+    * Alberta Health registration of the community pharamacy.
     * Meta-data of the delivered pharmacy dispensing data.
 
 ## Design
